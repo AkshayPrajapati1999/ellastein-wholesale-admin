@@ -1,0 +1,55 @@
+# image: node:18
+# stages:
+#   - install
+#   - build
+#   - test
+
+# Install Dependencies:
+#   stage: install
+#   script:
+#     - npm install --force
+
+# Build:
+#   stage: build
+#   script:
+#     - npm install --save next
+#     - npm run build
+
+# Test:
+#   stage: test
+#   script:
+#     - echo "test"
+
+image: node:18
+stages:
+  - test
+  - clone
+
+Run Tests:
+  stage: test
+  script:
+    - echo "test"
+# Run clone:
+#   stage: clone
+#   script:
+#     - echo "commit done"
+#     - apt-get update -qy
+#     - apt-get install -y git sshpass
+#     - apt-get install zip
+#     - apt-get install -y npm
+#     - git clone https://Appunik_Akshay:CV5WeDEyS793v3Q@gitlab.appunik-team.com/appunik/frontend/ellastein-wholesale-admin.git
+#     - cd ellastein-wholesale-admin
+#     - git fetch
+#     - echo "Branch Checkout"
+#     - git checkout side-bar-design
+#     - npm install --force
+#     - npm install --save next
+#     - npm run build
+#     - cd .. && tar -czvf ellastein-admin.tar.gz ellastein-wholesale-admin > tar.log 2>&1
+#     - echo "tar done"
+#     - sshpass -p 'AppUnik12345Qwerty' scp -o StrictHostKeyChecking=no ellastein-admin.tar.gz root@134.209.155.53:/var/www/
+#     - echo "scp done"
+#     - sshpass -p 'AppUnik12345Qwerty' ssh -o StrictHostKeyChecking=no root@134.209.155.53 'cd /var/www/ && tar -xzvf ellastein-admin.tar.gz' > untar.log 2>&1
+#     - echo "Process Completed"
+#   only:
+#     - production-development
