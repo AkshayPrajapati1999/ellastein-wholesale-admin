@@ -1,7 +1,5 @@
 import { Box } from '@mui/material'
 import Grid from '@mui/material/Grid'
-import { Dayjs } from 'dayjs'
-import { useState } from 'react'
 import withAuth from 'src/@core/components/HOC/withAuth'
 import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 import ThingsToDoNext from 'src/views/dashboard/ThingsToDoNext'
@@ -9,7 +7,7 @@ import WeeklyOverview from 'src/views/dashboard/WeeklyOverview'
 import DateRangePickerComponent from '../views/dashboard/DateRangeComponents'
 
 const Dashboard = () => {
-  const [selectedDate, setSelectedDate] = useState<null | Dayjs>(null)
+  // const [selectedDate, setSelectedDate] = useState<null | Dayjs>(null)
 
   return (
     <ApexChartWrapper>

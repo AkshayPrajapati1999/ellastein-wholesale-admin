@@ -126,7 +126,7 @@ const DateRangePickerComponent: React.FC = () => {
           </Button>
         </Grid>
       </Grid>
-      <DateRangePicker
+      {/* <DateRangePicker
         startText='Start Date'
         endText='End Date'
         value={value}
@@ -140,7 +140,7 @@ const DateRangePickerComponent: React.FC = () => {
             <TextField {...endProps} />
           </>
         )}
-      />
+      /> */}
     </LocalizationProvider>
   )
 }
